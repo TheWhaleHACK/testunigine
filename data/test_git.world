@@ -2,12 +2,12 @@
 <world version="2.19.0.3">
 	<render_settings_path>guid://92a0ee7917704584f2b913132a497d56e78094bd</render_settings_path>
 	<data>
-		<user/>
 		<unigine_editor>
 			<body>
 				<node_extensions/>
 			</body>
 		</unigine_editor>
+		<user/>
 	</data>
 	<sound>
 		<enabled>1</enabled>
@@ -263,6 +263,7 @@
 		<render_denoise_color_clamping_blur_intensity>0</render_denoise_color_clamping_blur_intensity>
 		<render_denoise_color_clamping_blur_intensity_ao>0</render_denoise_color_clamping_blur_intensity_ao>
 		<render_denoise_color_clamping_blur_radius>12</render_denoise_color_clamping_blur_radius>
+		<render_denoise_color_clamping_blur_resolution>2</render_denoise_color_clamping_blur_resolution>
 		<render_denoise_denoise_mask_bias>0.00100000005</render_denoise_denoise_mask_bias>
 		<render_denoise_denoise_mask_denoise_threshold>0.100000001</render_denoise_denoise_mask_denoise_threshold>
 		<render_denoise_denoise_mask_frame_count>8</render_denoise_denoise_mask_frame_count>
@@ -275,10 +276,12 @@
 		<render_denoise_num_blur_iterations>3</render_denoise_num_blur_iterations>
 		<render_denoise_preset>sharpest_low</render_denoise_preset>
 		<render_denoise_radius>1</render_denoise_radius>
+		<render_denoise_wrong_velocity_fix_by_depth_enabled>1</render_denoise_wrong_velocity_fix_by_depth_enabled>
+		<render_denoise_wrong_velocity_fix_by_depth_threshold>0.0299999993</render_denoise_wrong_velocity_fix_by_depth_threshold>
 		<render_depth_pre_pass>0</render_depth_pre_pass>
+		<render_direct_lighting_interleaved>0</render_direct_lighting_interleaved>
 		<render_direct_lighting_interleaved_catmull_resampling>0</render_direct_lighting_interleaved_catmull_resampling>
 		<render_direct_lighting_interleaved_color_clamping>1</render_direct_lighting_interleaved_color_clamping>
-		<render_direct_lighting_interleaved>0</render_direct_lighting_interleaved>
 		<render_direct_lighting_interleaved_samples>0</render_direct_lighting_interleaved_samples>
 		<render_dirt_scale>0.5</render_dirt_scale>
 		<render_distance_offset>0</render_distance_offset>
@@ -305,10 +308,14 @@
 		<render_environment_haze_colorization_threshold>0.5</render_environment_haze_colorization_threshold>
 		<render_environment_haze_gradient>2</render_environment_haze_gradient>
 		<render_environment_haze_screen_space_global_illumination>1</render_environment_haze_screen_space_global_illumination>
+		<render_environment_haze_screen_space_global_illumination_distance_max>100000</render_environment_haze_screen_space_global_illumination_distance_max>
+		<render_environment_haze_screen_space_global_illumination_distance_min>98000</render_environment_haze_screen_space_global_illumination_distance_min>
 		<render_environment_haze_temporal_filter>1</render_environment_haze_temporal_filter>
 		<render_environment_hemisphere>0</render_environment_hemisphere>
 		<render_exposure>0.400000006</render_exposure>
 		<render_exposure_adaptation>1</render_exposure_adaptation>
+		<render_exposure_max_luminance>-1.5</render_exposure_max_luminance>
+		<render_exposure_min_luminance>-5</render_exposure_min_luminance>
 		<render_exposure_mode>1</render_exposure_mode>
 		<render_f_stop>11</render_f_stop>
 		<render_fade_color>0 0 0 0</render_fade_color>
@@ -340,6 +347,11 @@
 		<render_indirect_diffuse_temporal_filtering_frame_count_min>1</render_indirect_diffuse_temporal_filtering_frame_count_min>
 		<render_indirect_diffuse_temporal_filtering_frames_clamping_velocity_threshold>10</render_indirect_diffuse_temporal_filtering_frames_clamping_velocity_threshold>
 		<render_indirect_lighting_interleaved>0</render_indirect_lighting_interleaved>
+		<render_indirect_lighting_interleaved_catmull_resampling>0</render_indirect_lighting_interleaved_catmull_resampling>
+		<render_indirect_lighting_interleaved_color_clamping>2</render_indirect_lighting_interleaved_color_clamping>
+		<render_indirect_lighting_interleaved_color_clamping_intensity>0</render_indirect_lighting_interleaved_color_clamping_intensity>
+		<render_indirect_lighting_interleaved_color_clamping_velocity_threshold>100</render_indirect_lighting_interleaved_color_clamping_velocity_threshold>
+		<render_indirect_lighting_interleaved_samples>1</render_indirect_lighting_interleaved_samples>
 		<render_indirect_specular_denoise_enabled>1</render_indirect_specular_denoise_enabled>
 		<render_indirect_specular_denoise_mask_enabled>1</render_indirect_specular_denoise_mask_enabled>
 		<render_indirect_specular_denoise_threshold>1</render_indirect_specular_denoise_threshold>
@@ -417,12 +429,21 @@
 		<render_lights_tile_grid_size>8</render_lights_tile_grid_size>
 		<render_linear_depth_precision>0</render_linear_depth_precision>
 		<render_local_tonemapper>1</render_local_tonemapper>
+		<render_local_tonemapper_blur_resolution>1</render_local_tonemapper_blur_resolution>
+		<render_local_tonemapper_blur_upscale>1</render_local_tonemapper_blur_upscale>
+		<render_local_tonemapper_blur_upscale_kernel_size>0</render_local_tonemapper_blur_upscale_kernel_size>
+		<render_local_tonemapper_color_difference_enabled>1</render_local_tonemapper_color_difference_enabled>
+		<render_local_tonemapper_color_difference_threshold>0.150000006</render_local_tonemapper_color_difference_threshold>
+		<render_local_tonemapper_debug>0</render_local_tonemapper_debug>
+		<render_local_tonemapper_depth_difference_enabled>0</render_local_tonemapper_depth_difference_enabled>
 		<render_local_tonemapper_depth_threshold>0.899999976</render_local_tonemapper_depth_threshold>
 		<render_local_tonemapper_effect_on_dark_areas>0.0500000007</render_local_tonemapper_effect_on_dark_areas>
+		<render_local_tonemapper_effect_on_dark_areas_gamma>5</render_local_tonemapper_effect_on_dark_areas_gamma>
 		<render_local_tonemapper_luma_blurred_intensity>1</render_local_tonemapper_luma_blurred_intensity>
 		<render_local_tonemapper_num_blur_iterations>5</render_local_tonemapper_num_blur_iterations>
 		<render_local_tonemapper_target_middle_gray>0.600000024</render_local_tonemapper_target_middle_gray>
 		<render_local_tonemapper_tonemapping_intensity>0.400000006</render_local_tonemapper_tonemapping_intensity>
+		<render_materials_quality>2</render_materials_quality>
 		<render_max_fps>150</render_max_fps>
 		<render_metering_mask_enabled>0</render_metering_mask_enabled>
 		<render_motion_blur>0</render_motion_blur>
@@ -436,6 +457,7 @@
 		<render_motion_blur_velocity_blur_radius>0.200000003</render_motion_blur_velocity_blur_radius>
 		<render_motion_blur_velocity_blur_samples>8</render_motion_blur_velocity_blur_samples>
 		<render_motion_blur_velocity_scale>0.75</render_motion_blur_velocity_scale>
+		<render_multithreaded>1</render_multithreaded>
 		<render_noise>0</render_noise>
 		<render_noise_intensity>0.0299999993</render_noise_intensity>
 		<render_object_distance>1e+09</render_object_distance>
@@ -480,6 +502,7 @@
 		<render_sharpen>1</render_sharpen>
 		<render_sharpen_intensity>0.5</render_sharpen_intensity>
 		<render_show_texture_resolution_blend>0.5</render_show_texture_resolution_blend>
+		<render_show_texture_resolution_streaming_accounting_mode>0</render_show_texture_resolution_streaming_accounting_mode>
 		<render_show_texture_resolution_uv_mode>0</render_show_texture_resolution_uv_mode>
 		<render_show_visualizer_distance>500</render_show_visualizer_distance>
 		<render_show_voxel_probe_visualizer_grid_size>15</render_show_voxel_probe_visualizer_grid_size>
@@ -572,6 +595,7 @@
 		<render_sssss_quality>2</render_sssss_quality>
 		<render_sssss_radius>0.0199999996</render_sssss_radius>
 		<render_sssss_resolution>1</render_sssss_resolution>
+		<render_sssss_taa>1</render_sssss_taa>
 		<render_sssss_taa_antialiasing_in_motion>0</render_sssss_taa_antialiasing_in_motion>
 		<render_sssss_taa_catmull_resampling>1</render_sssss_taa_catmull_resampling>
 		<render_sssss_taa_fix_flicker>1</render_sssss_taa_fix_flicker>
@@ -589,6 +613,7 @@
 		<render_stereo_hidden_area_exposure_transform>0.600000024 0.600000024 0 0</render_stereo_hidden_area_exposure_transform>
 		<render_stereo_hidden_area_transform>1 1 0 0</render_stereo_hidden_area_transform>
 		<render_stereo_planar_reflections_per_eye>0</render_stereo_planar_reflections_per_eye>
+		<render_streaming_animations_life_time>-1</render_streaming_animations_life_time>
 		<render_streaming_budget_loading>1</render_streaming_budget_loading>
 		<render_streaming_free_space_ram>1024</render_streaming_free_space_ram>
 		<render_streaming_free_space_vram>512</render_streaming_free_space_vram>
@@ -601,9 +626,10 @@
 		<render_streaming_textures_mipmaps>1</render_streaming_textures_mipmaps>
 		<render_streaming_textures_mipmaps_density>2</render_streaming_textures_mipmaps_density>
 		<render_streaming_textures_mode>0</render_streaming_textures_mode>
+		<render_streaming_usage_limit_ram>80</render_streaming_usage_limit_ram>
+		<render_streaming_usage_limit_vram>80</render_streaming_usage_limit_vram>
 		<render_streaming_vram_budget>1</render_streaming_vram_budget>
 		<render_streaming_vram_overcommit>0</render_streaming_vram_overcommit>
-		<render_streaming_usage_limit_vram>80</render_streaming_usage_limit_vram>
 		<render_supersampling>1</render_supersampling>
 		<render_taa>1</render_taa>
 		<render_taa_antialiasing_in_motion>0</render_taa_antialiasing_in_motion>
@@ -616,6 +642,8 @@
 		<render_taa_frames_by_color>1</render_taa_frames_by_color>
 		<render_taa_frames_by_velocity>1</render_taa_frames_by_velocity>
 		<render_taa_frames_velocity_threshold>1</render_taa_frames_velocity_threshold>
+		<render_taa_information_lost_depth_threshold>0.100000001</render_taa_information_lost_depth_threshold>
+		<render_taa_information_lost_frame_count>1</render_taa_information_lost_frame_count>
 		<render_taa_max_frames_by_velocity>60</render_taa_max_frames_by_velocity>
 		<render_taa_min_frames_by_velocity>4</render_taa_min_frames_by_velocity>
 		<render_taa_pixel_offset>1</render_taa_pixel_offset>
@@ -644,6 +672,19 @@
 		<render_transparent_enabled>1</render_transparent_enabled>
 		<render_transparent_light>1</render_transparent_light>
 		<render_transparent_multiple_env_probes>1</render_transparent_multiple_env_probes>
+		<render_upscale_dlss_mode>3</render_upscale_dlss_mode>
+		<render_upscale_dlss_preset>0</render_upscale_dlss_preset>
+		<render_upscale_fsr_auto_reactive_enabled>0</render_upscale_fsr_auto_reactive_enabled>
+		<render_upscale_fsr_auto_reactive_max>0.899999976</render_upscale_fsr_auto_reactive_max>
+		<render_upscale_fsr_auto_reactive_scale>5</render_upscale_fsr_auto_reactive_scale>
+		<render_upscale_fsr_auto_tc_scale>1</render_upscale_fsr_auto_tc_scale>
+		<render_upscale_fsr_auto_tc_threshold>0.0500000007</render_upscale_fsr_auto_tc_threshold>
+		<render_upscale_fsr_enable_sharpness>0</render_upscale_fsr_enable_sharpness>
+		<render_upscale_fsr_mode>3</render_upscale_fsr_mode>
+		<render_upscale_fsr_pre_exposure>1</render_upscale_fsr_pre_exposure>
+		<render_upscale_fsr_sharpness>0.5</render_upscale_fsr_sharpness>
+		<render_upscale_mode>0</render_upscale_mode>
+		<render_upscale_post>0</render_upscale_post>
 		<render_viewport_mode>0</render_viewport_mode>
 		<render_vignette_mask>0</render_vignette_mask>
 		<render_vignette_mask_intensity>1</render_vignette_mask_intensity>
@@ -683,47 +724,6 @@
 		<composite_deferred_material_guid>guid://</composite_deferred_material_guid>
 		<debug_materials/>
 		<scriptable_materials/>
-		<render_exposure_min_luminance>-5</render_exposure_min_luminance>
-		<render_exposure_max_luminance>-1.5</render_exposure_max_luminance>
-		<render_denoise_color_clamping_blur_resolution>2</render_denoise_color_clamping_blur_resolution>
-		<render_denoise_wrong_velocity_fix_by_depth_enabled>1</render_denoise_wrong_velocity_fix_by_depth_enabled>
-		<render_denoise_wrong_velocity_fix_by_depth_threshold>0.0299999993</render_denoise_wrong_velocity_fix_by_depth_threshold>
-		<render_indirect_lighting_interleaved_catmull_resampling>0</render_indirect_lighting_interleaved_catmull_resampling>
-		<render_indirect_lighting_interleaved_color_clamping>2</render_indirect_lighting_interleaved_color_clamping>
-		<render_indirect_lighting_interleaved_samples>1</render_indirect_lighting_interleaved_samples>
-		<render_materials_quality>2</render_materials_quality>
-		<render_multithreaded>1</render_multithreaded>
-		<render_multithreaded_editor>0</render_multithreaded_editor>
-		<render_taa_information_lost_depth_threshold>0.100000001</render_taa_information_lost_depth_threshold>
-		<render_taa_information_lost_frame_count>1</render_taa_information_lost_frame_count>
-		<render_environment_haze_screen_space_global_illumination_distance_max>100000</render_environment_haze_screen_space_global_illumination_distance_max>
-		<render_environment_haze_screen_space_global_illumination_distance_min>98000</render_environment_haze_screen_space_global_illumination_distance_min>
-		<render_local_tonemapper_blur_resolution>1</render_local_tonemapper_blur_resolution>
-		<render_local_tonemapper_blur_upscale>1</render_local_tonemapper_blur_upscale>
-		<render_local_tonemapper_blur_upscale_kernel_size>0</render_local_tonemapper_blur_upscale_kernel_size>
-		<render_local_tonemapper_color_difference_enabled>1</render_local_tonemapper_color_difference_enabled>
-		<render_local_tonemapper_color_difference_threshold>0.150000000</render_local_tonemapper_color_difference_threshold>
-		<render_local_tonemapper_debug>0</render_local_tonemapper_debug>
-		<render_local_tonemapper_depth_difference_enabled>0</render_local_tonemapper_depth_difference_enabled>
-		<render_show_texture_resolution_streaming_accounting_mode>0</render_show_texture_resolution_streaming_accounting_mode>
-		<render_upscale_dlss_mode>3</render_upscale_dlss_mode>
-		<render_upscale_dlss_preset>0</render_upscale_dlss_preset>
-		<render_upscale_fsr_auto_reactive_max>0.899999976</render_upscale_fsr_auto_reactive_max>
-		<render_upscale_fsr_auto_reactive_scale>5</render_upscale_fsr_auto_reactive_scale>
-		<render_upscale_fsr_auto_tc_scale>1</render_upscale_fsr_auto_tc_scale>
-		<render_upscale_fsr_auto_tc_threshold>0.0500000007</render_upscale_fsr_auto_tc_threshold>
-		<render_upscale_fsr_enable_sharpness>0</render_upscale_fsr_enable_sharpness>
-		<render_upscale_fsr_mode>3</render_upscale_fsr_mode>
-		<render_upscale_fsr_pre_exposure>1</render_upscale_fsr_pre_exposure>
-		<render_upscale_fsr_sharpness>0.5</render_upscale_fsr_sharpness>
-		<render_upscale_mode>0</render_upscale_mode>
-		<render_upscale_post>0</render_upscale_post>
-		<render_indirect_lighting_interleaved_color_clamping_intensity>0</render_indirect_lighting_interleaved_color_clamping_intensity>
-		<render_indirect_lighting_interleaved_color_clamping_velocity_threshold>100</render_indirect_lighting_interleaved_color_clamping_velocity_threshold>
-		<render_local_tonemapper_effect_on_dark_areas_gamma>5</render_local_tonemapper_effect_on_dark_areas_gamma>
-		<render_streaming_animations_life_time>-1</render_streaming_animations_life_time>
-		<render_streaming_usage_limit_ram>80</render_streaming_usage_limit_ram>
-		<render_sssss_taa>1</render_sssss_taa>
 	</render>
 	<physics>
 		<frozen_linear_velocity>0.0199999996</frozen_linear_velocity>
@@ -949,6 +949,7 @@
 				<shadow_screen_space_softness>0</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.200000003</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="1643cd19001c95b85d6fa38156067ff0e0398492"/>
 				<lens_flare_enabled>1</lens_flare_enabled>
 				<lens_flare_texture>core/textures/lens_flares_default.texture</lens_flare_texture>
 				<lens_flare_intensity>1</lens_flare_intensity>
@@ -1002,6 +1003,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>0.5 0.5 0.5</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1027,6 +1030,7 @@
 				<box_size>17.1891861 7.26303673 2.59246063</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1080,6 +1084,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="4400fdf37c1aef2882dcda9b6146444116dd2594"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -7.0023394 -1.0746461 2.2459061 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="954623620" name="LightEnvironmentProbe_2">
@@ -1093,6 +1098,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>0.5 0.5 0.5</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1118,6 +1125,7 @@
 				<box_size>17.1891861 7.26303673 2.66724372</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1171,6 +1179,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="e2fbc65d9682c8fd430693453aee6c145d2f27e6"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -7.0023355 -1.074648 5.284534 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="953711150" name="LightEnvironmentProbe_3">
@@ -1184,6 +1193,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>0.5 0.5 0.5</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1209,6 +1220,7 @@
 				<box_size>11.1258888 7.60507965 4.66379738</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1262,6 +1274,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="6be1d0d74237f4cd2bc087ff007f635c22182808"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -1.0131303 -13.748217 3.2312858 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="1315374539" name="LightEnvironmentProbe_4">
@@ -1275,6 +1288,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>0.5 0.5 0.5</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1300,6 +1315,7 @@
 				<box_size>7.13080215 3.6131134 4.63451958</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1353,6 +1369,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="ce7bcbe1ec3f83f21547f74941a1139df165767a"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 8.5118113 -11.755322 3.2342248 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="1217902211" name="LightEnvironmentProbe_6">
@@ -1366,6 +1383,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>0.5 0.5 0.5</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1391,6 +1410,7 @@
 				<box_size>16.1801338 34.2773552 9.28160477</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1444,6 +1464,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="dfdd09fbef568aed9c1743a390d0b36cfa8f37bc"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 20.990999 -5.046349 5.5560813 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="1394392038" name="LightEnvironmentProbe_1">
@@ -1457,6 +1478,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-6 -2 -2</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1482,6 +1505,7 @@
 				<box_size>33.1792831 16.3409004 11.6417809</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1535,6 +1559,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="32dc21a58862633365a2938d308543743d03844e"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -4.9537063 10.621111 4.6295342 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="1127940245" name="LightEnvironmentProbe_8">
@@ -1548,6 +1573,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-2 -6 -1</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1573,6 +1600,7 @@
 				<box_size>7.17523193 11.371026 7.45385122</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1626,6 +1654,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="01fc8d5fbced588c8825718706c63ff3c53e88b0"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -19.42786 -0.16203524 3.6919963 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="754751731" name="LightEnvironmentProbe_9">
@@ -1639,6 +1668,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-4 -2 -2</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1664,6 +1695,7 @@
 				<box_size>11.3613625 23.8807983 9.76862717</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1717,6 +1749,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="56314ba9b91f199559e96c11f717ac28ad37a562"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 6.6283121 6.3219557 3.7450013 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="1480929287" name="LightEnvironmentProbe_10">
@@ -1730,6 +1763,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-0.100000001 -0.100000001 -0.100000001</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1755,6 +1790,7 @@
 				<box_size>23.6536903 3.672369 6.38395023</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1808,6 +1844,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="34207f030737b20332adb5ab81a245c49beb8ee4"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0.22644809 -7.7475748 4.0288157 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="1305946951" name="LightEnvironmentProbe_11">
@@ -1821,6 +1858,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-4 -0.5 -0.5</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1846,6 +1885,7 @@
 				<box_size>14.9439392 16.9175873 5.71576691</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1899,6 +1939,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="e1d00ded641b83c1da17c4d5458d437b9b0b6db6"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -14.2983 -14.019426 3.4088275 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="627743344" name="LightEnvironmentProbe_12">
@@ -1912,6 +1953,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-4 -0.5 -0.5</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -1937,6 +1980,7 @@
 				<box_size>14.9439392 4.74815941 5.81880379</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -1990,6 +2034,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="58e342e70b2d5a618854f40f6fd5c2a71718fe58"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -1.0500032 -20.104139 3.4603462 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="822136334" name="LightEnvironmentProbe_13">
@@ -2003,6 +2048,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-4 -0.5 -0.5</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -2028,6 +2075,7 @@
 				<box_size>8.00772095 8.81672478 5.81880379</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -2081,6 +2129,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="45d16c71a5600220125521d9cc1eea390d77b14a"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 8.334466 -18.069857 3.4603465 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="899680478" name="LightEnvironmentProbe_7">
@@ -2094,6 +2143,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-4 -1 -0.5</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -2119,6 +2170,7 @@
 				<box_size>30.1229877 10.0717411 9.54551792</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -2172,6 +2224,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="9abd7d0b7d003589294650b3638a480d9d3acb0c"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 16.249331 17.171385 5.2283964 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="139918342" name="LightEnvironmentProbe_5">
@@ -2185,6 +2238,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-1 -1 -1</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -2210,6 +2265,7 @@
 				<box_size>14.7476854 1.27302504 4.24281073</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -2263,6 +2319,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="4cd6ab35c21c7c2d0d39471dab91d973b2b8841e"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -8.2395735 3.4593794 3.995712 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="922116638" name="LightEnvironmentProbe_14">
@@ -2276,6 +2333,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-1 -1 -1</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -2301,6 +2360,7 @@
 				<box_size>14.7476854 0.695172429 1.69372153</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -2354,6 +2414,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="5d6a116fb6a62258c5172f97f8ea30fc2b2a2900"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -8.2395735 2.3168588 5.2702565 1.0</transform>
 			</node>
 			<node type="LightEnvironmentProbe" id="1901841593" name="LightEnvironmentProbe_15">
@@ -2367,6 +2428,8 @@
 				<ambient_enabled>0</ambient_enabled>
 				<ambient_contrast>1</ambient_contrast>
 				<attenuation_distance>-1 -1 -1</attenuation_distance>
+				<srgb_modified>0</srgb_modified>
+				<reflection_cubic_filtering>0</reflection_cubic_filtering>
 				<grab_mode>0</grab_mode>
 				<grab_viewport_mask>-1</grab_viewport_mask>
 				<grab_ggx_mipmaps_quality>0</grab_ggx_mipmaps_quality>
@@ -2392,6 +2455,7 @@
 				<box_size>14.7476854 0.535530984 1.69372153</box_size>
 				<sphere_reflection_parallax>1</sphere_reflection_parallax>
 				<raymarching_noise_frames_number>16</raymarching_noise_frames_number>
+				<raymarching_secondary_bounce_projection_mode>0</raymarching_secondary_bounce_projection_mode>
 				<raymarching_last_step_mode>0</raymarching_last_step_mode>
 				<raymarching_ambient_occlusion_intensity>0</raymarching_ambient_occlusion_intensity>
 				<raymarching_ambient_occlusion_radius>1</raymarching_ambient_occlusion_radius>
@@ -2445,6 +2509,7 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="640d4e39cbd7702e6a5038a172db0ea7e4e13a32"/>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -8.2395735 2.4172194 2.75 1.0</transform>
 			</node>
 			<node type="LightVoxelProbe" id="977121940" name="LightVoxelProbe">
@@ -2497,12 +2562,1088 @@
 				<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
 				<shadow_screen_space_translucent_depth_perspective_compensation>0.25</shadow_screen_space_translucent_depth_perspective_compensation>
 				<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+				<baked_depth_texture replace="7d8a2413763faab66ceb34bb88044cd889d98c34"/>
 				<transform>1 2.5243552e-29 0 0.0 -2.5243552e-29 1 -1.4210854e-14 0.0 -3.5873241e-43 1.4210855e-14 1 0.0 4.0681005 -1.2260934 5.4835181 1.0</transform>
 			</node>
 		</node>
 		<node type="NodeReference" id="1777446179" name="first_person_controller">
 			<reference>guid://59e4bb833f8dab069c5b06ad189c382836a5bd67</reference>
 			<transform>-0.70710671 0.70710677 0 0.0 -0.70710677 -0.70710671 0 0.0 0 0 0.99999988 0.0 6.0763869 11.499999 3.2710779 1.0</transform>
+		</node>
+		<node type="NodeDummy" id="753033020" name="TV-16Эксплуатация">
+			<transform>1 2.64697695043e-22 -3.8213700833e-15 0.0 6.9377079129e-23 1 8.74227552572e-08 0.0 3.8213700833e-15 -8.74227552572e-08 1 0.0 0.912467663376 11.0610640565 1.00000017842 1.0</transform>
+			<node type="NodeDummy" id="45855083" name="Armature">
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 -28.2184681222 15.1601122086 54.237611642 1.0</transform>
+				<node type="NodeDummy" id="2082117582" name="Зубчатое Колесо_m1_Z100">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.295009296843 -0.0921383081674 0.0945072405082 1.0</transform>
+					<node type="ObjectMeshStatic" id="1969405141" immovable="1" name="Ходовой винт ">
+						<mesh_name>guid://af52441e377290b7741144a64707ae80bbb13afe</mesh_name>
+						<surface name="МеханизмПодач2" intersection="1" material="cca3e1e51440c91d917390fdc09255472c9570ad"/>
+						<surface name="ХодовойВинт" intersection="1" material="c2645dcd1af6cf861eabc3e59a6879ed0865f195"/>
+						<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<surface name="МеханизмПодач3" intersection="1" material="9a7398b130eae832e6d9344939deeb9d4509a5f9"/>
+						<transform>-1.30713804061e-07 -6.63763661058e-08 -1 0.0 0.99519164921 -0.0979468291656 -1.23583931646e-07 0.0 -0.0979468291656 -0.99519164921 7.88602078893e-08 0.0 0.000243602278744 -0.000160961089208 0.000929241187456 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="2054973488" name="Зубчатое Колесо_m1_Z75">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.308027846536 -0.0786502126198 0.139963925939 1.0</transform>
+					<node type="ObjectMeshStatic" id="854810063" immovable="1" name="Hodovoy vint_v sbore.147">
+						<mesh_name>guid://2c1cf47db6273924261e5c9583ca142324be2645</mesh_name>
+						<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+						<surface name="МеханизмПодач" intersection="1" material="dd9561597c005a3448057bf1a89c513b52301fa1"/>
+						<surface name="МеханизмПодач3" intersection="1" material="9a7398b130eae832e6d9344939deeb9d4509a5f9"/>
+						<transform>-1.19248766334e-08 -4.37113866623e-08 -1 0.0 1 1.1920928903e-07 -1.19248818442e-08 0.0 1.19209289551e-07 -1 4.37113852407e-08 0.0 3.72683863022e-08 9.53674642208e-09 -4.23272528138e-16 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1935814882" name="Шпиндель">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.245889475337 -0.027174922265 0.134625989194 1.0</transform>
+					<node type="ObjectMeshStatic" id="2113370841" immovable="1" name="Hodovoy vint_v sbore.033">
+						<mesh_name>guid://d964b280cd07f2ee7e89864839153c059a1362e0</mesh_name>
+						<surface name="ПередняяБабка" intersection="1" material="d3697a95d09932b50f63ebada9e7378f6cd6975d"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<transform>-1.19248766334e-08 -4.37113866623e-08 -1 0.0 1 1.1920928903e-07 -1.19248818442e-08 0.0 1.19209289551e-07 -1 4.37113852407e-08 0.0 3.68653854382e-08 3.21964677141e-15 -6.93889390391e-18 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1008969316" name="Крышка Шпинделя">
+					<transform>1 1.72046743131e-07 -2.19437309563e-08 0.0 1.72046743131e-07 -0.96798526795 0.251007013908 0.0 2.19437309563e-08 -0.251007013908 -0.96798526795 0.0 0.249695513245 -0.0272371374164 0.185601273774 1.0</transform>
+					<node type="ObjectMeshStatic" id="1045315187" immovable="1" name="Hodovoy vint_v sbore.073">
+						<mesh_name>guid://f719dbf7c33cd6ac072861cf08d37a6e70b038bf</mesh_name>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<surface name="ПередняяБабка2" intersection="1" material="58cec2618d4689ce8b3d7ff96f6f29342c3095a9"/>
+						<surface name="КраскаКрасная" intersection="1" material="4da1e6e903c725cda5b49781652e8a2af7141731"/>
+						<transform>1 1.17388751683e-07 -8.21266223207e-08 0.0 1.17388751683e-07 -0.34277074783 0.939419020045 0.0 8.21266223207e-08 -0.939419020045 -0.34277074783 0.0 -2.38418219889e-09 -4.11272046072e-08 9.536744984e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="746910006" name="КУЛАЧКОВЫЙ ПАТРОН">
+					<transform>0.999999940395 1.21651335627e-07 1.62920696588e-07 0.0 1.62920715697e-07 -1.62920664923e-07 -1 0.0 -1.21651309084e-07 0.999999940395 -1.62920669821e-07 0.0 0.224668915404 -0.137876080283 0.0140968669124 1.0</transform>
+					<node type="ObjectMeshStatic" id="93370141" immovable="1" name="Hodovoy vint_v sbore.009">
+						<mesh_name>guid://a38163b250ea3b5095d5bcba7498fc21b6a4ef12</mesh_name>
+						<surface name="КулачковыйПатрон" intersection="1" material="6bbe81c14d29d818ee28035973daec9ea7548109"/>
+						<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+						<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+						<transform>-2.50343446024e-07 1.58932324778e-08 -0.999999940395 0.0 0.999999940395 -8.33746136612e-15 -2.50343446024e-07 0.0 -7.10542502504e-15 -1 -1.58932334251e-08 0.0 -2.86102294911e-08 -2.83106871279e-15 -7.74860381118e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="261279192" name="Рукоятка Фартука">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.127029332785 -0.105320268508 0.0542104767106 1.0</transform>
+					<node type="ObjectMeshStatic" id="520058711" immovable="1" name="Hodovoy vint_v sbore.112">
+						<mesh_name>guid://66dbfc01e353f4bbc4355599c32eabfa92d24349</mesh_name>
+						<surface name="Фартук4" intersection="1" material="a3e4ddf96d257609e6f0b4912b50ad397a379041"/>
+						<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+						<surface name="Фартук2" intersection="1" material="4970f3a12744de55e60c2939a5a5cce79e9ceee9"/>
+						<surface name="Фартук3" intersection="1" material="27a489ad45b3d0edeb9363c550e7ecd56ebcc975"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<transform>0.607273393129 1.26030695862e-07 0.794492861383 0.0 -0.794492861383 -2.49544067013e-07 0.607273393129 0.0 2.74796096775e-07 -1 -5.14109870971e-08 0.0 -7.35278991048e-09 -6.10622663544e-16 -2.77555756156e-17 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1081322698" name="Рукоякта Салазок">
+					<transform>7.03330846428e-07 1 4.37113900019e-08 0.0 1.19209357465e-07 4.37113061583e-08 -1 0.0 -0.999999940395 7.03330809717e-07 -1.19209314405e-07 0.0 0.0214157718272 -0.0475567565852 0.0969526693151 1.0</transform>
+					<node type="ObjectMeshStatic" id="2028025249" immovable="1" name="Hodovoy vint_v sbore.186">
+						<mesh_name>guid://284b7434161e064326ac547c96fa455e0a0c7414</mesh_name>
+						<surface name="ПоворотнынСалазки2" intersection="1" material="40f9d7f5146d5451699a4d0d283d61bfb8c6b0bd"/>
+						<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+						<transform>-2.37800588001e-08 4.14090124119e-08 -1.00000011921 0.0 -0.22798786072 -0.973663974564 -3.48969155573e-08 0.0 -0.973663974564 0.22798786072 3.25945348354e-08 0.0 -6.64499293782e-08 -6.64052146604e-15 -1.90734863459e-08 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1475728012" name="Зубчатое Колесо_m1_Z24">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.296401504118 -0.0390708602807 0.14049067668 1.0</transform>
+					<node type="ObjectMeshStatic" id="897215611" immovable="1" name="Hodovoy vint_v sbore.200">
+						<mesh_name>guid://3dc7e71b7fc277498d94ba7315edbdd80b44d063</mesh_name>
+						<surface name="МеханизмПодач" intersection="1" material="dd9561597c005a3448057bf1a89c513b52301fa1"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -8.38816137003e-10 3.57627840709e-09 -4.76837173566e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1390573470" name="Зубчатое Колесо_m1_Z30">
+					<transform>2.26493688225e-07 1 4.37113900019e-08 0.0 1.19209313173e-07 4.37113630017e-08 -1 0.0 -1 2.26493693436e-07 -1.19209303273e-07 0.0 0.29640152331 -0.0404280920459 0.126190845349 1.0</transform>
+					<node type="ObjectMeshStatic" id="1543895653" immovable="1" name="Hodovoy vint_v sbore.201">
+						<mesh_name>guid://4bfa5486d44e39ee85e88e0ef84ed299939ffa66</mesh_name>
+						<surface name="МеханизмПодач" intersection="1" material="dd9561597c005a3448057bf1a89c513b52301fa1"/>
+						<transform>2.26493697257e-07 1.58932964278e-08 -1 0.0 1 1.51111573528e-14 2.26493697257e-07 0.0 1.87108889305e-14 -1 -1.58932964278e-08 0.0 4.86069880976e-09 1.63064006742e-16 -5.96046447615e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1046341760" name="Зубчатое Колесо_m1_Z36">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.296535096445 -0.05770561852 0.134647982259 1.0</transform>
+					<node type="ObjectMeshStatic" id="106349023" immovable="1" name="Hodovoy vint_v sbore.202">
+						<mesh_name>guid://b5e773c5ed2b54c67c54d6dd6cb9ff6ced494e8d</mesh_name>
+						<surface name="МеханизмПодач" intersection="1" material="dd9561597c005a3448057bf1a89c513b52301fa1"/>
+						<surface name="МеханизмПодач3" intersection="1" material="9a7398b130eae832e6d9344939deeb9d4509a5f9"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -1.27992711042e-09 2.38418582793e-09 3.57627858404e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="249341362" name="РукояткаТрензеля">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.283811726014 -0.0481869963489 0.133078129014 1.0</transform>
+					<node type="ObjectMeshStatic" id="369772905" immovable="1" name="Hodovoy vint_v sbore.204">
+						<mesh_name>guid://9389e928011d2942a12e9df084b70a402a391e88</mesh_name>
+						<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+						<surface name="Трензель" intersection="1" material="f86793015f86057e96918c99e45940d3c4d0ba49"/>
+						<surface name="Трензель2" intersection="1" material="1b80eb0d3132cfb321b74925c287f7352290c6d5"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -1.39844777623e-09 2.38418524853e-09 -9.53674326792e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="527795124" name="Крышка Гитары">
+					<transform>1.89164974433e-07 1 -7.43433548353e-08 0.0 -0.936604458873 2.03221818139e-07 0.350388821222 0.0 0.350388821222 3.34902521846e-09 0.936604458873 0.0 0.326927839893 -0.0724790975122 0.171872123072 1.0</transform>
+					<node type="ObjectMeshStatic" id="74734467" immovable="1" name="Hodovoy vint_v sbore.002">
+						<mesh_name>guid://99a35c7f986ae2e6e59855576c4aafe81ec7b047</mesh_name>
+						<surface name="КрышкаГитары" intersection="1" material="5d5ff1bd876518307f3a51d578cfed2b1503eb85"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<surface name="КрышкаГитары2" intersection="1" material="536499099b32afc2275315a161e6ff493035ad51"/>
+						<transform>-8.07691206263e-08 -0.507063303752 -0.861908607893 0.0 1 -3.22565589068e-08 -7.47329489979e-08 0.0 1.00921146027e-08 -0.861908607893 0.507063303752 0.0 7.89215662725e-08 2.38419311377e-09 9.53674306192e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1117309702" name="РукояткаПоперечн.ПодачиСуппорта">
+					<transform>0.995411564533 0.0956860344764 -4.18256958827e-09 0.0 -0.0956860344764 0.995411564533 2.00566526542e-10 0.0 4.1825695532e-09 2.00567257845e-10 1 0.0 0.107222696214 -0.0644150446101 0.00772152228589 1.0</transform>
+					<node type="ObjectMeshStatic" id="1386981037" immovable="1" name="Hodovoy vint_v sbore.236">
+						<mesh_name>guid://6527aa9a26c6b8a08deccca20b435dfd93be30fa</mesh_name>
+						<surface name="Суппорт3" intersection="1" material="47bc101162d56cd609216fa92765584835b88959"/>
+						<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<transform>7.5497899571e-08 -1 4.37113861805e-08 0.0 1 7.54979014722e-08 4.37113905231e-08 0.0 -4.37113938232e-08 4.37113828804e-08 1 0.0 -3.99680288865e-15 4.52995300333e-08 -1.97064586871e-15 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="443832360" name="Рукоятка Резцедержателя">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.114828110438 -0.00797441962766 0.0968321803718 1.0</transform>
+					<node type="ObjectMeshStatic" id="190799207" immovable="1" name="Cylinder">
+						<mesh_name>guid://95d5dfc98820726670a4e4610f3bedad4d050c11</mesh_name>
+						<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+						<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+						<transform>-1.80721489859e-07 -3.15550094e-08 -0.721894204617 0.0 0.721894204617 -7.89958927591e-15 -1.80721489859e-07 0.0 7.67623608449e-22 -0.721894204617 3.15550094e-08 0.0 -4.13494112754e-09 4.76837121177e-09 -1.38777878078e-16 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1854716826" name="*1Винт Резцедержателя">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.126431190103 -0.0173852009859 0.0851130111664 1.0</transform>
+					<node type="ObjectMeshStatic" id="1046337073" immovable="1" name="Hodovoy vint_v sbore.191">
+						<mesh_name>guid://4a24c55ce1346ab0540196a4392879fc5628563c</mesh_name>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -5.0197138178e-09 4.76837157259e-09 9.53674300641e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="894654940" name="*2Винт Резцедержателя">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.126453982919 -0.0173853530618 0.0967813308686 1.0</transform>
+					<node type="ObjectMeshStatic" id="1844718475" immovable="1" name="Hodovoy vint_v sbore.190">
+						<mesh_name>guid://e2de60236d34a2df6c52d67b4076246e1ab33c6b</mesh_name>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -4.13877929526e-09 -7.77156117238e-16 -9.53674317294e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1539410798" name="*3Винт Резцедержателя">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.126448356241 -0.0173849329331 0.108505440518 1.0</transform>
+					<node type="ObjectMeshStatic" id="546233333" immovable="1" name="Hodovoy vint_v sbore.195">
+						<mesh_name>guid://73f539ee25323e27828ecc76ec87e065e80ea6ce</mesh_name>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -3.25363377175e-09 1.38777878078e-16 9.53674317294e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1245756624" name="Каретка поперечной подачи суппорт">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.106880955774 -0.0554405078785 0.0919188809787 1.0</transform>
+					<node type="ObjectMeshStatic" id="1027828207" immovable="1" name="Hodovoy vint_v sbore.155">
+						<mesh_name>guid://ca9e040d1b62738960c5c225afb34cb825c17fd5</mesh_name>
+						<surface name="Суппорт2" intersection="1" material="3f8a77453baed66d81152a5d8184ed325806020d"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -4.5058842896e-09 -3.95516952523e-16 -5.55111512313e-17 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="224890498" name="Резцедержатель">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.114728395827 -0.025988793417 0.0968016826546 1.0</transform>
+					<node type="ObjectMeshStatic" id="405470201" immovable="1" name="Hodovoy vint_v sbore.188">
+						<mesh_name>guid://1103fcd0f327dd2830c1b298dabf7791bbfe4f30</mesh_name>
+						<surface name="Резцедержатель" intersection="1" material="e3412efd78e89aa2ea4c871588cfc5838195f0c5"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -4.13724372697e-09 4.76837121177e-09 -1.94289029309e-16 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="844363012" name="ДЕТАЛЬ">
+					<transform>-7.19807442598e-08 1.00000023842 1.98184038239e-08 0.0 0.686958947763 6.38498020527e-08 -0.726696225453 0.0 -0.726696225453 -3.86936960964e-08 -0.686958947763 0.0 0.115225175378 -0.147242955348 0.00634503054508 1.0</transform>
+					<node type="ObjectMeshStatic" id="733346963" immovable="1" name="Cylinder.001">
+						<mesh_name>guid://b385560726570d8ed49621df7e9702ead79618cf</mesh_name>
+						<surface name="Material.010" intersection="1" material="db121819806ed8c8482cbab1e29ee9335d0f6e61"/>
+						<transform>0.418320596218 1.08304938207e-07 -2.16965277446e-07 0.0 2.5811360187e-07 0.00760294181045 1.92665078164 0.0 1.09160289899e-07 -0.418317428838 0.00165068236066 0.0 7.69822940997e-08 9.18090291079e-06 -1.21402744492e-05 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="564811990" name="РЕЗЕЦ">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.0399534927637 -0.148666835514 0.0135687988416 1.0</transform>
+					<node type="ObjectMeshStatic" id="2120268349" immovable="1" name="резец стл">
+						<mesh_name>guid://bb6416827f094bdfd198218a850ce5e36927afe2</mesh_name>
+						<surface name="резец" intersection="1" material="69991771c67e52db80343b092f73be4600f77cb9"/>
+						<transform>2.0515523047e-10 0.0152738681787 0.0352411377203 0.0 2.02623196748e-09 -0.0302202148936 0.0130977500333 0.0 0.0178759340197 1.90290765836e-09 -9.28803701776e-10 0.0 -1.04211517259e-08 -9.15933995316e-16 0 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1635890808" name="ДЕТАЛЬ СТОЧЕННАЯ">
+					<transform>1.07158778807e-07 1.00000011921 4.37112945049e-08 0.0 0.00143718670007 4.3557257841e-08 -0.999998967247 0.0 -0.999999205665 1.07221502211e-07 -0.00143718704274 0.0 0.219700930107 -0.02713643426 0.134604254955 1.0</transform>
+					<node type="ObjectMeshStatic" id="812713847" immovable="1" name="Cylinder.002">
+						<mesh_name>guid://c51ae4912f87de2740d3f429bf5374939098edd9</mesh_name>
+						<surface name="деталь точенная" intersection="1" material="9bea9ca53fae93f4784653bdedd16d9287fba36d"/>
+						<transform>0.41832062602 4.35408139324e-08 -2.24952075523e-07 0.0 2.9716195786e-07 -0.00276899621006 1.9266634355 0.0 4.32174609239e-08 -0.41832022368 -0.000601289100051 0.0 -0.000184098551372 -6.02263014258e-05 0.0144569981125 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1975828074" name="Шкиф">
+					<transform>9.4174942553e-07 1 4.37113900019e-08 0.0 1.19209378308e-07 4.37112777365e-08 -1 0.0 -0.999999940395 9.41749374608e-07 -1.19209324826e-07 0.0 0.241226068525 -0.283951598921 0.133019345298 1.0</transform>
+					<node type="ObjectMeshStatic" id="866441921" immovable="1" name="Hodovoy vint_v sbore.319">
+						<mesh_name>guid://caa6c384706bad9808eaa5cc613cb924bd287d64</mesh_name>
+						<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+						<transform>-1.31134176606e-07 1.58933111141e-08 -1.00000011921 0.0 0.999999999999 -1.07288360648e-06 -1.31134198868e-07 0.0 -1.07288360856e-06 -0.999999999999 -1.58931685278e-08 0.0 -3.64721307751e-08 -7.1525601518e-09 9.53674347132e-09 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1741681964" name="Каретка Повортных Салазок">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.107382244741 -0.0508544785624 0.0969406531629 1.0</transform>
+					<node type="ObjectMeshStatic" id="1325002395" immovable="1" name="Hodovoy vint_v sbore.004">
+						<mesh_name>guid://00a2e22b8afbb5c84d8a5b8376976f3238372973</mesh_name>
+						<surface name="КареткаПоворотныхСалазок" intersection="1" material="4adeab1d31ae7edd04a18f35198368b6874b80e5"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<transform>-1.31134171395e-07 1.58932405305e-08 -1 0.0 1 1.1920928903e-07 -1.311341695e-07 0.0 1.19209286945e-07 -1 -1.5893256163e-08 0.0 -4.12675087185e-09 -3.60822483003e-16 0 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="559207230" name="Повортные Салазки">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.107382244741 -0.0508544785624 0.0969406531629 1.0</transform>
+					<node type="ObjectMeshStatic" id="1526096261" immovable="1" name="Hodovoy vint_v sbore.003">
+						<mesh_name>guid://635e94563118228749439fde40d97f591dfae036</mesh_name>
+						<surface name="ПоворотнынСалазки2" intersection="1" material="40f9d7f5146d5451699a4d0d283d61bfb8c6b0bd"/>
+						<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+						<surface name="ПоворотныеСалазки" intersection="1" material="779ff4695f1de0de83c3b501514793fe99f254b1"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<surface name="КареткаПоворотныхСалазок" intersection="1" material="4adeab1d31ae7edd04a18f35198368b6874b80e5"/>
+						<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+						<transform>-1.31134171395e-07 1.58932405305e-08 -1 0.0 1 1.1920928903e-07 -1.311341695e-07 0.0 1.19209286945e-07 -1 -1.5893256163e-08 0.0 -4.12675087185e-09 -3.60822483003e-16 0 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="197780768" name="Рукоятка Маточной Гайки">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.0791367228878 -0.0909660618217 0.0764658014006 1.0</transform>
+					<node type="ObjectMeshStatic" id="656037375" immovable="1" name="Hodovoy vint_v sbore.107">
+						<mesh_name>guid://58cfc55539a6f34138ac3e6d14e9accb9cc7da1d</mesh_name>
+						<surface name="Фартук4" intersection="1" material="a3e4ddf96d257609e6f0b4912b50ad397a379041"/>
+						<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+						<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -5.6725593651e-09 -4.85722573274e-16 2.77555756156e-17 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="485485394" name="Электроборудование">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.50283453439 0.166545123256 0.285128548018 1.0</transform>
+					<node type="ObjectMeshStatic" id="1197642377" immovable="1" name="Circle.001">
+						<mesh_name>guid://12178d78ef30a847bd4b64404ef21c5e205194d8</mesh_name>
+						<surface name="ЭлектроДвигатель" intersection="1" material="417068c10b91fb1630a240292c86e0e54f0df6da"/>
+						<surface name="metal" intersection="1" material="416974cd0702b10150e317b59baf6a346efd9016"/>
+						<surface name="wire" intersection="1" material="4c004e15c49a2cb4db0e55fd856bf0692a4ef27e"/>
+						<surface name="meta dark" intersection="1" material="6a679de12d2906a27c3d094959e4725edfd5907a"/>
+						<surface name="dark metal" intersection="1" material="769d3fed8371534da3ea36d5ad48e869829767b6"/>
+						<surface name="name plate " intersection="1" material="9ddde0390c7a5393ee620aa157ecd29ec9931432"/>
+						<surface name="white rough metall" intersection="1" material="cf826ac523da836d9674f0adbb750c7a310e71ee"/>
+						<surface name="Material.008" intersection="1" material="66267159087f9ce34fdbafc1de45823c5c3999d2"/>
+						<surface name="Material.007" intersection="1" material="43cc1b0d44062bbbea8665f5b49adf927b140f56"/>
+						<surface name="Material.009" intersection="1" material="9ef4d1e58d1a75fca4502bcd0502578859d5758e"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -0.708921215287 0.133527321937 0.22064986599 1.0</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="1916009044" name="Фартук суппорта и каретки подач">
+					<transform>-1.19248908764e-08 1 4.37113900019e-08 0.0 1.1920929233e-07 4.37113914234e-08 -1 0.0 -1 -1.19248856656e-08 -1.19209292851e-07 0.0 0.152075966409 -0.0933067822059 0.0785638325469 1.0</transform>
+					<node type="ObjectMeshStatic" id="822354339" immovable="1" name="Hodovoy vint_v sbore.137">
+						<mesh_name>guid://fda3e88f8c0c05d2cb91e767f1bd15c3eaf99257</mesh_name>
+						<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+						<surface name="Фартук4" intersection="1" material="a3e4ddf96d257609e6f0b4912b50ad397a379041"/>
+						<surface name="Фартук" intersection="1" material="78b96fd5eb285a1ed729d8ede6677f27c8c9949d"/>
+						<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+						<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+						<surface name="Суппорт" intersection="1" material="b49c74b91c413a99ff66d351630e34baa49abf01"/>
+						<surface name="МеталлическиеСоставляющиеDARK" intersection="1" material="500bb84d55751d58cb890e65d9a5ed9c04d7dc15"/>
+						<surface name="Суппорт3" intersection="1" material="47bc101162d56cd609216fa92765584835b88959"/>
+						<transform>-2.50343460946e-07 1.58932334251e-08 -1 0.0 1 -5.73205994244e-15 -2.50343460946e-07 0.0 -9.71082695855e-15 -1 -1.58932334251e-08 0.0 -0.449069321923 -0.0730373736662 -0.13010871568 1.0</transform>
+					</node>
+				</node>
+			</node>
+			<node type="NodeDummy" id="670472870" name="BezierCircle">
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="533262797" immovable="1" name="Cube">
+				<mesh_name>guid://64cc476aa43e16a0acd15b723ad803dde5e90bca</mesh_name>
+				<surface name="Material.001" intersection="1" material="98de68b1337c13613faa8619bee69ad822debe8a"/>
+				<transform>-1.76792910018e-05 134.81829834 -0.000113326343411 0.0 6.11680698814e-05 6.55028225537e-05 1228.89306641 0.0 170.469345093 2.23543534064e-05 -6.11680764487e-05 0.0 -0.351052389639 12.1143760541 24.8174433181 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="117434568" immovable="1" name="Cube.001">
+				<mesh_name>guid://45ec2a59ae44fa1c0f6fa4f1fdf3ed6deab108a1</mesh_name>
+				<surface name="Material.001" intersection="1" material="98de68b1337c13613faa8619bee69ad822debe8a"/>
+				<transform>-1.76792910018e-05 134.81829834 -0.000113326343411 0.0 6.11680698814e-05 6.55028225537e-05 1228.89306641 0.0 170.469345093 2.23543534064e-05 -6.11680764487e-05 0.0 -0.351051096191 -2.6809425494 24.8174439648 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1236628871" immovable="1" name="Cube.002">
+				<mesh_name>guid://9d200eac73d525a27cba21f44479edb38895898c</mesh_name>
+				<surface name="Material.001" intersection="1" material="98de68b1337c13613faa8619bee69ad822debe8a"/>
+				<transform>-1.76792910018e-05 134.81829834 -0.000113326343411 0.0 6.11680698814e-05 6.55028225537e-05 1228.89306641 0.0 170.469345093 2.23543534064e-05 -6.11680764487e-05 0.0 -30.2126475434 12.1143710021 24.8174433181 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1101575482" immovable="1" name="Cube.003">
+				<mesh_name>guid://6dfb8d332e28111a176d698b4d7e41472f80b77b</mesh_name>
+				<surface name="Material.001" intersection="1" material="98de68b1337c13613faa8619bee69ad822debe8a"/>
+				<transform>-1.76792910018e-05 134.81829834 -0.000113326343411 0.0 6.11680698814e-05 6.55028225537e-05 1228.89306641 0.0 170.469345093 2.23543534064e-05 -6.11680764487e-05 0.0 -30.21264625 -2.68094515998 24.8174439648 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2095006545" immovable="1" name="Cube.004">
+				<mesh_name>guid://0ee603be02bd61106a5aa846298518dfda16469e</mesh_name>
+				<surface name="Material" intersection="1" material="6d1ea1bd0fde0cf737adaaa59a5928eecaebd0c6"/>
+				<transform>-2.51474664383e-06 210.882354736 -2.57135920092e-05 0.0 -2.59001220238e-06 2.66837372523e-05 188.688018799 0.0 266.647613525 3.17974143429e-06 1.18835200425e-05 0.0 -15.7498623973 3.85188264456 38.828193191 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="461415548" immovable="1" name="Cube.005">
+				<mesh_name>guid://5b8fd79d9bd62d6e47476bb51e59381815217d65</mesh_name>
+				<surface name="Material" intersection="1" material="6d1ea1bd0fde0cf737adaaa59a5928eecaebd0c6"/>
+				<transform>9.21795649919e-06 -210.882354736 2.63423460981e-05 0.0 4.97948082583e-05 -2.6998112151e-05 -195.880126953 0.0 266.647613525 1.16555404716e-05 6.04804003828e-05 0.0 -15.7498625404 5.48906564161 19.5919907269 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1939649963" immovable="1" name="Cube.006">
+				<mesh_name>guid://59bd3b206e4e867c860852e84e172085e5f58f80</mesh_name>
+				<surface name="Material.005" intersection="1" material="46912909eceb34072ea4c5712e645e1db4ee4842"/>
+				<surface name="Material.002" intersection="1" material="32fdea957c92b470f82f427dacc51fd93b2f00fe"/>
+				<surface name="Material.006" intersection="1" material="0ea5126170424a73804ccdc90d1c530d708a16fa"/>
+				<transform>123.577224731 1.08034662913e-05 -1.08034645312e-05 0.0 1.08034662913e-05 -2.0133284486e-05 123.577224731 0.0 1.08034645312e-05 -123.577224731 -2.01332854305e-05 0.0 1.31636978691 19.1374187453 37.4745255307 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1232686862" immovable="1" name="Hodovoy vint_v sbore.001">
+				<mesh_name>guid://c9073417509dfe92879fc5ef754d1d30c4943cdf</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="91589397" immovable="1" name="Hodovoy vint_v sbore.006">
+				<mesh_name>guid://39c9dd5241eda61305e61a5af564a59a39fde4b2</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1843290480" immovable="1" name="Hodovoy vint_v sbore.007">
+				<mesh_name>guid://364ed121e04e88f16d6916b9b4e7d627acd47c69</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1870431759" immovable="1" name="Hodovoy vint_v sbore.011">
+				<mesh_name>guid://7ad346d46b1be3222136ab1cf4e6d079d30c1ab4</mesh_name>
+				<surface name="МеханизмПодач" intersection="1" material="dd9561597c005a3448057bf1a89c513b52301fa1"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="446872610" immovable="1" name="Hodovoy vint_v sbore.012">
+				<mesh_name>guid://d432813ba1efebad881220936cdc3cc062440683</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1291455769" immovable="1" name="Hodovoy vint_v sbore.013">
+				<mesh_name>guid://7a4f2826061316e70dbb85aef200f854f7467a06</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="231379876" immovable="1" name="Hodovoy vint_v sbore.014">
+				<mesh_name>guid://def55ae5d5d1365f625a69fd60fb4e88ca3789ad</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="294636211" immovable="1" name="Hodovoy vint_v sbore.015">
+				<mesh_name>guid://e821a5c8f6b2cdd2c3e91e9013fbd3df1400df28</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="922390646" immovable="1" name="Hodovoy vint_v sbore.016">
+				<mesh_name>guid://975b589f0f77f6f653f7dd77a26f27af644c3867</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2017283421" immovable="1" name="Hodovoy vint_v sbore.017">
+				<mesh_name>guid://eb1a783ae8873ee6abf7fe429deaf03a34d5da9a</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="NodeDummy" id="1383329560" name="Hodovoy vint_v sbore.018">
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1995286423" immovable="1" name="Hodovoy vint_v sbore.019">
+				<mesh_name>guid://cd8bf8e95a83816b9e756981becb3503796e6931</mesh_name>
+				<surface name="Станина" intersection="1" material="d408c85dd3a2371a6d50a4759acbf19868cf6625"/>
+				<surface name="Станина2" intersection="1" material="f50bcda96289b085de3b06416bec4a36d23715f1"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 -16.1209742732 1.73988328093 39.4675341036 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1426432010" immovable="1" name="Hodovoy vint_v sbore.020">
+				<mesh_name>guid://c5770bfcd8342e13951ae144f1ae1b9caabcd0dc</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1819676641" immovable="1" name="Hodovoy vint_v sbore.021">
+				<mesh_name>guid://cf75de43f6ac905685f2a09b4043f51388b9368b</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1438279628" immovable="1" name="Hodovoy vint_v sbore.022">
+				<mesh_name>guid://5ef1a18e6c7234852961d816fcd6f6ea4d251a6e</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2133688507" immovable="1" name="Hodovoy vint_v sbore.024">
+				<mesh_name>guid://149b6f2dd9fe8307b6ac5945e2599d9984971ef5</mesh_name>
+				<surface name="ПередняяБабка" intersection="1" material="d3697a95d09932b50f63ebada9e7378f6cd6975d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1699479262" immovable="1" name="Hodovoy vint_v sbore.025">
+				<mesh_name>guid://05256d7007de6315c41267386e86f938345e23d0</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="210065573" immovable="1" name="Hodovoy vint_v sbore.026">
+				<mesh_name>guid://4370762747f7edd162764dff665a6bb4e6cba4ef</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="681783744" immovable="1" name="Hodovoy vint_v sbore.027">
+				<mesh_name>guid://104fb822916316e3f57ca72a18200dff33d48d82</mesh_name>
+				<surface name="ПередняяБабка" intersection="1" material="d3697a95d09932b50f63ebada9e7378f6cd6975d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="776665631" immovable="1" name="Hodovoy vint_v sbore.028">
+				<mesh_name>guid://b8b0c1b1a3fc99b5a58dbd495211158a604deef9</mesh_name>
+				<surface name="ПередняяБабка" intersection="1" material="d3697a95d09932b50f63ebada9e7378f6cd6975d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1659699442" immovable="1" name="Hodovoy vint_v sbore.029">
+				<mesh_name>guid://39b5fe24dbfb56856695646caff6bf6e83ec4c04</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1215982505" immovable="1" name="Hodovoy vint_v sbore.030">
+				<mesh_name>guid://9f57c44bed38ec6a006d09a3bc68633f821c6793</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="890028276" immovable="1" name="Hodovoy vint_v sbore.032">
+				<mesh_name>guid://22390ff68853dac207dd3f7ed0ed18b4467fc7d6</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1523185603" immovable="1" name="Hodovoy vint_v sbore.035">
+				<mesh_name>guid://78213475e75906b09c88598d9d8460ca3e715d3d</mesh_name>
+				<surface name="ПередняяБабка3" intersection="1" material="d538dc6da8cb62f3708cbe85c81c4de62f6bd435"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="57883206" immovable="1" name="Hodovoy vint_v sbore.036">
+				<mesh_name>guid://1add321833a3ba7fd25ccce0c4381773ae4bfd78</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="56020205" immovable="1" name="Hodovoy vint_v sbore.037">
+				<mesh_name>guid://b9baacafacd6f04cb41b37874f7f4dff1e00a277</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="10668392" immovable="1" name="Hodovoy vint_v sbore.038">
+				<mesh_name>guid://864f3d0a17d062d9aebdb5121695d4ace0d19d6a</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1276812711" immovable="1" name="Hodovoy vint_v sbore.039">
+				<mesh_name>guid://870e4b796ddfeabf616f3211a370ba5c8b262dc1</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="434667226" immovable="1" name="Hodovoy vint_v sbore.040">
+				<mesh_name>guid://71aebd4c6ba0cba4a5c8d494cc249508fb732c2c</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="319963249" immovable="1" name="Hodovoy vint_v sbore.041">
+				<mesh_name>guid://674e53531b61e32660437baba9f59d0f352db99b</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1158823708" immovable="1" name="Hodovoy vint_v sbore.042">
+				<mesh_name>guid://1c25135eee7a81011ed15be6c362f94947d8223e</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="758992843" immovable="1" name="Hodovoy vint_v sbore.043">
+				<mesh_name>guid://03a9cabd6af66a147c3d8ad5e9461881581b6485</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1093264046" immovable="1" name="Hodovoy vint_v sbore.044">
+				<mesh_name>guid://601193c03449075ef3d4ef886494bff070dd0c20</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1591659061" immovable="1" name="Hodovoy vint_v sbore.045">
+				<mesh_name>guid://40d21c3725c8fea4918aba0f31a0b396399d50ff</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="293426704" immovable="1" name="Hodovoy vint_v sbore.046">
+				<mesh_name>guid://1dd2a6f295aca4c85858c7fae2c096bcc098aa52</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2007413295" immovable="1" name="Hodovoy vint_v sbore.047">
+				<mesh_name>guid://26b9b6417ad1004bb91ae7d962299f2c7a0e4589</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="561756610" immovable="1" name="Hodovoy vint_v sbore.048">
+				<mesh_name>guid://3773e97409a7f4d2474bd1bca610da6ae93e1154</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1605152313" immovable="1" name="Hodovoy vint_v sbore.049">
+				<mesh_name>guid://ff33ab5b151408dc881c16b3f767171e80b14ca3</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1764721220" immovable="1" name="Hodovoy vint_v sbore.050">
+				<mesh_name>guid://2dc94bc6a3ffd9f03575cd4e1687c7c3e5e3c9a6</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="979609811" immovable="1" name="Hodovoy vint_v sbore.051">
+				<mesh_name>guid://745c52050f8c556ec29f0d1dedc063e35c8e54cd</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1700632598" immovable="1" name="Hodovoy vint_v sbore.052">
+				<mesh_name>guid://52bf3268fe5e78a5713b6f300de3fc79ed77efc8</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="116289661" immovable="1" name="Hodovoy vint_v sbore.053">
+				<mesh_name>guid://51f2e4bfd94253ee938cf5976fd39d227f97d087</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="328300472" immovable="1" name="Hodovoy vint_v sbore.054">
+				<mesh_name>guid://99e795da56bc1344b5bf7fe2b682e6c59169543a</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1635604407" immovable="1" name="Hodovoy vint_v sbore.065">
+				<mesh_name>guid://710c2209b99b0670d855fea157c55a80d0015651</mesh_name>
+				<surface name="ПередняяБабка" intersection="1" material="d3697a95d09932b50f63ebada9e7378f6cd6975d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="832459178" immovable="1" name="Hodovoy vint_v sbore.066">
+				<mesh_name>guid://a78c229c3d93f76956a8fbe407e4baf7c2cd9b7c</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1335678209" immovable="1" name="Hodovoy vint_v sbore.074">
+				<mesh_name>guid://53c5ec638c989f0d6500fabb44fc47723bef40ab</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="291318380" immovable="1" name="Hodovoy vint_v sbore.075">
+				<mesh_name>guid://a7cd592e34b22d96db1633b639cddb0cec0c5e0e</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1637688027" immovable="1" name="Hodovoy vint_v sbore.076">
+				<mesh_name>guid://9ee3ea4d432d6795e58400653e1c624d55e74e15</mesh_name>
+				<surface name="Задняя.Бабка2" intersection="1" material="f49edc851e1db9c421c9879d11817a684991ef4d"/>
+				<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 -25.070027006 1.72228613227 51.5239061747 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="883948158" immovable="1" name="Hodovoy vint_v sbore.077">
+				<mesh_name>guid://0296ae106bca83c03184ebd8e064023e62574870</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2105204677" immovable="1" name="Hodovoy vint_v sbore.078">
+				<mesh_name>guid://017d26472a1cb8383b8e0a1fd2f4fbb814aa410f</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1796329056" immovable="1" name="Hodovoy vint_v sbore.079">
+				<mesh_name>guid://fe6fa9c29b4b488cabb77ccaa17271a379773b22</mesh_name>
+				<surface name="Задняя.Бабка" intersection="1" material="954059f1d37bff1c74486d893c4b869504fc0f39"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 -30.2101954528 1.60519015181 50.5724022736 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1810935359" immovable="1" name="Hodovoy vint_v sbore.080">
+				<mesh_name>guid://c722aed1f2dce9ad7c2996695ca82afeaf5e8019</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="557573778" immovable="1" name="Hodovoy vint_v sbore.081">
+				<mesh_name>guid://237208c483c86b24f8def30c2be446874db66aa4</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 -35.2027320841 1.72122812165 51.6182030498 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1318704329" immovable="1" name="Hodovoy vint_v sbore.082">
+				<mesh_name>guid://5727366bb8cde8c30ee047c3d36014dc4733b5b3</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1286068116" immovable="1" name="Hodovoy vint_v sbore.083">
+				<mesh_name>guid://80ecdb967d4708ad2d922f1edddf98bb32ef7f76</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="239984099" immovable="1" name="Hodovoy vint_v sbore.084">
+				<mesh_name>guid://d3efb39505aa5c39784784ad5b76015eb1e7705d</mesh_name>
+				<surface name="Задняя.Бабка2" intersection="1" material="f49edc851e1db9c421c9879d11817a684991ef4d"/>
+				<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+				<surface name="Задняя.Бабка3" intersection="1" material="9ea7b1511ceafc2e6d4388e993d8da6eca52d299"/>
+				<surface name="КраскаКрасная" intersection="1" material="4da1e6e903c725cda5b49781652e8a2af7141731"/>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 -35.9010133342 1.72263827378 51.5241112528 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="670476774" immovable="1" name="Hodovoy vint_v sbore.085">
+				<mesh_name>guid://2b7ca6b84be70a32e45a05802fbddab17509b618</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="589117453" immovable="1" name="Hodovoy vint_v sbore.087">
+				<mesh_name>guid://f77500cf6dc926731c1e17a751d62947d4d2c297</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+				<surface name="ХодовойВинт" intersection="1" material="c2645dcd1af6cf861eabc3e59a6879ed0865f195"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 -29.4320777118 0.859013931465 52.5850585562 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="579140104" immovable="1" name="Hodovoy vint_v sbore.088">
+				<mesh_name>guid://2ea082aa5b8da4d66eda5eb26540593e0569ff0a</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1670829511" immovable="1" name="Hodovoy vint_v sbore.089">
+				<mesh_name>guid://be5e7c9909d12ad64f62cf31edbd805fa668e2e1</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1152653434" immovable="1" name="Hodovoy vint_v sbore.090">
+				<mesh_name>guid://14143bec6c68fe443ee05734c9528070a2211ecc</mesh_name>
+				<surface name="ЗеленаяКраска" intersection="1" material="5595f9b5821cfaf18371259da3264621a7070c9e"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 -30.8759205448 1.54005399684 47.3477245421 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1597951377" immovable="1" name="Hodovoy vint_v sbore.091">
+				<mesh_name>guid://815da973cf3e34e5790c1dcb528b1d79ac4ecbbb</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="732965308" immovable="1" name="Hodovoy vint_v sbore.092">
+				<mesh_name>guid://dc7772feda7db27aefdd5f86708a81ec46decdde</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="945682923" immovable="1" name="Hodovoy vint_v sbore.095">
+				<mesh_name>guid://54b2cdddf94c13c65048b9f57f95e4c6b673dba5</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1924875854" immovable="1" name="Hodovoy vint_v sbore.096">
+				<mesh_name>guid://2009bc6061aa99c9fc975c28705aee481cf1d8c0</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="194156885" immovable="1" name="Hodovoy vint_v sbore.097">
+				<mesh_name>guid://f8029457dcc939fe91713e2f9c8171353bd3751f</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="893754032" immovable="1" name="Hodovoy vint_v sbore.098">
+				<mesh_name>guid://db83c092ee56f4b20215c59a0d8fa70ff6dd3ff2</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1204416079" immovable="1" name="Hodovoy vint_v sbore.099">
+				<mesh_name>guid://dce4ab61fc65dc725712c8f9e9de1c5a2bc79ea9</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="475694946" immovable="1" name="Hodovoy vint_v sbore.100">
+				<mesh_name>guid://7c555c14173331f0c813c85cb9f49f2a7d4a57f4</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2005589849" immovable="1" name="Hodovoy vint_v sbore.101">
+				<mesh_name>guid://e0d3657b7fd64a50b2ba9cd33cc584fbcf14a2c3</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1932181732" immovable="1" name="Hodovoy vint_v sbore.102">
+				<mesh_name>guid://e0d0bf664e4ed3aaf07f64ee832dbae8de5fe946</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1958319859" immovable="1" name="Hodovoy vint_v sbore.103">
+				<mesh_name>guid://d764592533a8a792b96ac03dfa7a254f8615afed</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1505456054" immovable="1" name="Hodovoy vint_v sbore.106">
+				<mesh_name>guid://840a8f0838be226b7acd8fd060864069ddc65068</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1648108445" immovable="1" name="Hodovoy vint_v sbore.110">
+				<mesh_name>guid://fbf200dff57189bb09df9db79c029fea5db278a7</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="704794712" immovable="1" name="Hodovoy vint_v sbore.113">
+				<mesh_name>guid://c277037a097ef9ac052b5182647282b7e2e09dda</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="589830103" immovable="1" name="Hodovoy vint_v sbore.121">
+				<mesh_name>guid://661e5b299f7dbb5e6f0ea3c100527c15ab05d371</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1391907658" immovable="1" name="Hodovoy vint_v sbore.122">
+				<mesh_name>guid://5b8c093c453da66b34d3e68461882c90e402b61c</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1835084321" immovable="1" name="Hodovoy vint_v sbore.126">
+				<mesh_name>guid://bad68a83156837e5b785e4dbad7ba993addd5acb</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="509623564" immovable="1" name="Hodovoy vint_v sbore.127">
+				<mesh_name>guid://ddf060ce0b4d19dfc013df56746e4b7520ac71ae</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="366007547" immovable="1" name="Hodovoy vint_v sbore.129">
+				<mesh_name>guid://1bbf756d0ff97558ba94b785664bfcceb47a0d35</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1500038686" immovable="1" name="Hodovoy vint_v sbore.132">
+				<mesh_name>guid://d6ffbeb099a63fd087c1407812abb7145211bd10</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1587476197" immovable="1" name="Hodovoy vint_v sbore.138">
+				<mesh_name>guid://d9336667e5ab5109de65563f16aca243ef39ed2f</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2101197568" immovable="1" name="Hodovoy vint_v sbore.139">
+				<mesh_name>guid://3babeb62ec57686ad330a26a7fc7d646a077b8c2</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1947431519" immovable="1" name="Hodovoy vint_v sbore.141">
+				<mesh_name>guid://3738abf1b74298bfd66f7f89cf4f16f02112a139</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="205823026" immovable="1" name="Hodovoy vint_v sbore.146">
+				<mesh_name>guid://e002e36404a4e60c68ef51acf64a75c5152ed944</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1929956841" immovable="1" name="Hodovoy vint_v sbore.148">
+				<mesh_name>guid://bc19388bf7ebe8e6cfec15e3df02d4a7320513d3</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="833437236" immovable="1" name="Hodovoy vint_v sbore.149">
+				<mesh_name>guid://c3e1f736cc996cf3b7ca6ebe8379a724bc320716</mesh_name>
+				<surface name="МеханизмПодач3" intersection="1" material="9a7398b130eae832e6d9344939deeb9d4509a5f9"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1545065475" immovable="1" name="Hodovoy vint_v sbore.153">
+				<mesh_name>guid://8f8342b5518315196a31bfcd868094ec6af2137d</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="476637574" immovable="1" name="Hodovoy vint_v sbore.154">
+				<mesh_name>guid://ce9deb589d0ca0aadeeb0e20f4effc1305b2beb8</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1222914861" immovable="1" name="Hodovoy vint_v sbore.156">
+				<mesh_name>guid://7b5ae4ef7ce98914bb2287c7b89dd8455e77f2b7</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1540258472" immovable="1" name="Hodovoy vint_v sbore.157">
+				<mesh_name>guid://18a8184a96a5ccfaf10f5852a86bef0b871a30aa</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="624041447" immovable="1" name="Hodovoy vint_v sbore.158">
+				<mesh_name>guid://b3a4bdb907ec579fcc127c5108d9a3be48c12801</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="57901594" immovable="1" name="Hodovoy vint_v sbore.161">
+				<mesh_name>guid://69788a8c38833d2d9e28a9d457a4a14acc47616c</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="598534833" immovable="1" name="Hodovoy vint_v sbore.162">
+				<mesh_name>guid://b9318f935874444c81cf4feb99b8bab3906beddb</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1560437852" immovable="1" name="Hodovoy vint_v sbore.163">
+				<mesh_name>guid://e945229e2e197c244fe6b326940bc60acd12497e</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="914797579" immovable="1" name="Hodovoy vint_v sbore.164">
+				<mesh_name>guid://02f2e0fdf0637cf652b0f91533f696ff1cf2e2c5</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1108703726" immovable="1" name="Hodovoy vint_v sbore.165">
+				<mesh_name>guid://814db5007897280a08f798c89dc060b5a05bf560</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="240711797" immovable="1" name="Hodovoy vint_v sbore.166">
+				<mesh_name>guid://ac209c77ed44df4397db524fc021e073fb3ea93f</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="761212752" immovable="1" name="Hodovoy vint_v sbore.167">
+				<mesh_name>guid://d2c52a328baf8b1fcc05133abbe477017d33a592</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="367934063" immovable="1" name="Hodovoy vint_v sbore.168">
+				<mesh_name>guid://c197b081f56794c13b18ba19a6b001b9574887c9</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2040997122" immovable="1" name="Hodovoy vint_v sbore.169">
+				<mesh_name>guid://5b9f9eb41eccf46846b68efc7efbd0d5d3d8ee94</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="534552697" immovable="1" name="Hodovoy vint_v sbore.199">
+				<mesh_name>guid://ff19af9b7a1f0bf010f5b2f3bc8363f4b9f608e3</mesh_name>
+				<surface name="МеханизмПодач3" intersection="1" material="9a7398b130eae832e6d9344939deeb9d4509a5f9"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1852067716" immovable="1" name="Hodovoy vint_v sbore.205">
+				<mesh_name>guid://21cd8306586e02a8c6404c8e9a56379d93a2d8e6</mesh_name>
+				<surface name="МеханизмПодач3" intersection="1" material="9a7398b130eae832e6d9344939deeb9d4509a5f9"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="320443667" immovable="1" name="Hodovoy vint_v sbore.206">
+				<mesh_name>guid://6d55704559a72e91e705835dff79cb62cc959b0d</mesh_name>
+				<surface name="МеханизмПодач3" intersection="1" material="9a7398b130eae832e6d9344939deeb9d4509a5f9"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1962678102" immovable="1" name="Hodovoy vint_v sbore.209">
+				<mesh_name>guid://60abbba88b14210b66478070f078b05c60140108</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1710122685" immovable="1" name="Hodovoy vint_v sbore.210">
+				<mesh_name>guid://6be0acff8f4bc7c94077d5d7ec7a4ba62fa430c7</mesh_name>
+				<surface name="МеханизмПодач3" intersection="1" material="9a7398b130eae832e6d9344939deeb9d4509a5f9"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1861122296" immovable="1" name="Hodovoy vint_v sbore.212">
+				<mesh_name>guid://09b0c11ad1dbddbac82373226ec7d83ed6a3b77a</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="854976503" immovable="1" name="Hodovoy vint_v sbore.213">
+				<mesh_name>guid://d68aa449451cab7b776758e1882b96c748c3e091</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1953965290" immovable="1" name="Hodovoy vint_v sbore.217">
+				<mesh_name>guid://c09ebfdc921931e1bfc3a124f1f4ebdee80420bc</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="973803329" immovable="1" name="Hodovoy vint_v sbore.218">
+				<mesh_name>guid://33afb8a30c0826b08f895efbcf27e5c3dc0b84eb</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="342597548" immovable="1" name="Hodovoy vint_v sbore.219">
+				<mesh_name>guid://24c2b86e918c245a14c2daf613fe22bafaed554e</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1062246171" immovable="1" name="Hodovoy vint_v sbore.228">
+				<mesh_name>guid://c176108d542d2a0907267ea553e30f00df175c55</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1365139902" immovable="1" name="Hodovoy vint_v sbore.229">
+				<mesh_name>guid://04089f50f132400e096f6518e112097ae3b581b0</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="79273477" immovable="1" name="Hodovoy vint_v sbore.230">
+				<mesh_name>guid://da1b3687654145916d84325faea8db56c882a94f</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1565456288" immovable="1" name="Hodovoy vint_v sbore.231">
+				<mesh_name>guid://51ec7d02b6a34d9d9ed0180afa1eb8f7033e0662</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="515589759" immovable="1" name="Hodovoy vint_v sbore.232">
+				<mesh_name>guid://13bab911bf1c2eb20a2778a91e77f0e6bcb25259</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1282351570" immovable="1" name="Hodovoy vint_v sbore.233">
+				<mesh_name>guid://bb908e041deedd78d3ee804c873d0f11e8fd97e4</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="856643337" immovable="1" name="Hodovoy vint_v sbore.240">
+				<mesh_name>guid://c635caab7dc77ee77e987403a4de2ac4f11881f3</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1891955924" immovable="1" name="Hodovoy vint_v sbore.241">
+				<mesh_name>guid://438062d6cc8fac8a37edfe5ed68516faef2f5eb6</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1487919651" immovable="1" name="Hodovoy vint_v sbore.243">
+				<mesh_name>guid://d223e1d5ed138aa8948f0aedd9de25f88159469d</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="464648486" immovable="1" name="Hodovoy vint_v sbore.246">
+				<mesh_name>guid://c2e8fff8db3d380c61b7e6c012d6a7aa456f1758</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1651752525" immovable="1" name="Hodovoy vint_v sbore.249">
+				<mesh_name>guid://adf4590f821ee3166cb087e7fa46a6a14df832d7</mesh_name>
+				<surface name="МеталлическиеСоставляющиеDARK" intersection="1" material="500bb84d55751d58cb890e65d9a5ed9c04d7dc15"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1873234760" immovable="1" name="Hodovoy vint_v sbore.250">
+				<mesh_name>guid://534dfdeacbfa957d0d44a1f2fa88c3f30d4a324a</mesh_name>
+				<surface name="МеталлическиеСоставляющиеDARK" intersection="1" material="500bb84d55751d58cb890e65d9a5ed9c04d7dc15"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1777628679" immovable="1" name="Hodovoy vint_v sbore.285">
+				<mesh_name>guid://72a90ed956aa193d8e46397137aa3cc26276fd21</mesh_name>
+				<surface name="ПередняяБабка3" intersection="1" material="d538dc6da8cb62f3708cbe85c81c4de62f6bd435"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="193903546" immovable="1" name="Hodovoy vint_v sbore.294">
+				<mesh_name>guid://cb03a92c666923100dc9cc7433c724015d8df40c</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="111450065" immovable="1" name="Hodovoy vint_v sbore.295">
+				<mesh_name>guid://efd205b38fa424effe95120b75bfe63f610d1ffb</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2058415868" immovable="1" name="Hodovoy vint_v sbore.296">
+				<mesh_name>guid://6ff6223e4fafca18c55556c62608ecea845a951e</mesh_name>
+				<surface name="ПередняяБабка2" intersection="1" material="58cec2618d4689ce8b3d7ff96f6f29342c3095a9"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1296006699" immovable="1" name="Hodovoy vint_v sbore.297">
+				<mesh_name>guid://46b2041d51b521c516be483599297aa89c6079e5</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1193311630" immovable="1" name="Hodovoy vint_v sbore.298">
+				<mesh_name>guid://1f857da04bc95dd4b59da568e1d0050c85436200</mesh_name>
+				<surface name="МеталлическиеСоставляющиеDARK" intersection="1" material="500bb84d55751d58cb890e65d9a5ed9c04d7dc15"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="234481557" immovable="1" name="Hodovoy vint_v sbore.299">
+				<mesh_name>guid://3eb43497f0adc1d85950f66f679cc4896be6ed5f</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="569512944" immovable="1" name="Hodovoy vint_v sbore.300">
+				<mesh_name>guid://377ee3d239c54dbed30eb0daecc95e87e803db32</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1545311887" immovable="1" name="Hodovoy vint_v sbore.301">
+				<mesh_name>guid://019ac5a1ee25ed539cf4bb39cd59afddf5d900e9</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="466195106" immovable="1" name="Hodovoy vint_v sbore.302">
+				<mesh_name>guid://db7ab154801d955bda5c259c31b9d3cf4591d534</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1206514073" immovable="1" name="Hodovoy vint_v sbore.303">
+				<mesh_name>guid://440e89bbb8f8f3748fd55913fb19b558b1dd7f03</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="830746148" immovable="1" name="Hodovoy vint_v sbore.304">
+				<mesh_name>guid://932796a6282a1d60d220842efb6eb3caec949886</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1812702003" immovable="1" name="Hodovoy vint_v sbore.305">
+				<mesh_name>guid://9f7797659b5c1c846fb7567d20f6a86b59d6162d</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1275563766" immovable="1" name="Hodovoy vint_v sbore.306">
+				<mesh_name>guid://014ab848dfd72e296d514110af2bdc19438901a8</mesh_name>
+				<surface name="Станина" intersection="1" material="d408c85dd3a2371a6d50a4759acbf19868cf6625"/>
+				<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 -12.949476529 2.4094436974 44.1044823166 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="298662365" immovable="1" name="Hodovoy vint_v sbore.307">
+				<mesh_name>guid://1c46e91f0588987ee4dd9df7b78de4326a74f8e7</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="259912088" immovable="1" name="Hodovoy vint_v sbore.308">
+				<mesh_name>guid://687cceba02680848008fe4c2f9f2427f8e1aa11a</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<surface name="ЗеленаяКраска" intersection="1" material="5595f9b5821cfaf18371259da3264621a7070c9e"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1273939991" immovable="1" name="Hodovoy vint_v sbore.309">
+				<mesh_name>guid://3018fd69e964b6bdca281e01196858c4cb837db1</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1166493322" immovable="1" name="Hodovoy vint_v sbore.310">
+				<mesh_name>guid://29ec467c01eb82cf7ba02bc421ebdeb83c79db5c</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="232948833" immovable="1" name="Hodovoy vint_v sbore.311">
+				<mesh_name>guid://d15976c30fef89cc6313691b62485ef34801bf0b</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="522670668" immovable="1" name="Hodovoy vint_v sbore.312">
+				<mesh_name>guid://33ac600e3b0d8dad298b26966478d4d63eb708ee</mesh_name>
+				<surface name="КрепёжныеДетали" intersection="1" material="4ed2e44119a2d825d39555d92b20f8078afd3389"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="94660923" immovable="1" name="Hodovoy vint_v sbore.315">
+				<mesh_name>guid://4a4fbbadd587c170a08155c5a51ec9e138873b75</mesh_name>
+				<surface name="Корпус.Гитары" intersection="1" material="df86ad35ec3c2f6f00711a4d3f3f9b4e4adf8dfd"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1316539742" immovable="1" name="Hodovoy vint_v sbore.316">
+				<mesh_name>guid://bf594ff0345f8f262d3759b8c8e65e82cb6a9650</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1754453285" immovable="1" name="Hodovoy vint_v sbore.317">
+				<mesh_name>guid://37bc96a7aa0df1e1af729e7f11058e22b68c756f</mesh_name>
+				<surface name="МеталлическиеСоставляющие" intersection="1" material="f669c275ebd48208f1f6278da911df29407cab3d"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1567458368" immovable="1" name="Hodovoy vint_v sbore.318">
+				<mesh_name>guid://9f195ea2be2eb9b8957dddaa24ae2f74f0322402</mesh_name>
+				<surface name="Резина" intersection="1" material="b60b0c6d6c2125b2a0a9535550021dbf96eae636"/>
+				<transform>100 8.74227942467e-06 -8.74227800037e-06 0.0 8.74227942467e-06 -1.6292067191e-05 100 0.0 8.74227800037e-06 -100 -1.62920679553e-05 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="133180063" immovable="1" name="Plane">
+				<mesh_name>guid://2b70d631fa9b67f9b11981c95ef8e436ed859379</mesh_name>
+				<surface name="Material" intersection="1" material="6d1ea1bd0fde0cf737adaaa59a5928eecaebd0c6"/>
+				<transform>0.000245714839318 -2.28582656242e-05 1438.23925781 0.0 -1568.59338379 -0.000259922184535 0.000244160377999 0.0 0.000231243380331 -1240.54614258 -1.97163207655e-05 0.0 -38.345444583 2.82563936793 28.3840452866 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2116253554" immovable="1" name="Plane.001">
+				<mesh_name>guid://f64308a4e92dc5accb047eec8154e198ebcaa684</mesh_name>
+				<surface name="Material" intersection="1" material="6d1ea1bd0fde0cf737adaaa59a5928eecaebd0c6"/>
+				<transform>0.000280015258987 0.000171139048535 1438.13537598 0.0 0.000363743855752 -1238.53442383 0.000179863808642 0.0 1566.04980469 0.000427513417138 -0.000304921167816 0.0 -13.6243620612 -8.3701269027 28.4023099362 1.0</transform>
+			</node>
 		</node>
 	</editor>
 	<console>

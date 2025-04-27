@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.19.0.3">
+	<guid>b75c625d705d8f4c136240ec55457350dad73d3b</guid>
+	<type>component</type>
+	<hash>01b8163c</hash>
+	<runtimes>
+		<runtime id="b75c625d705d8f4c136240ec55457350dad73d3b" name="GUIGetPathModel.cs" link="0"/>
+	</runtimes>
+</asset>

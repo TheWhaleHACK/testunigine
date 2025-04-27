@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.19.0.3">
+	<guid>2374083177334320ad5e160656e2f21fa824764c</guid>
+	<type>component</type>
+	<hash>3ae8be6f</hash>
+	<runtimes>
+		<runtime id="2374083177334320ad5e160656e2f21fa824764c" name="GetModelID.cs" link="0"/>
+	</runtimes>
+</asset>
