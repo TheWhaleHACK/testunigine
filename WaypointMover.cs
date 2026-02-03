@@ -132,81 +132,85 @@ public class WaypointMover : Component
         // Устанавливаем новую позицию
         splineObject.WorldPosition = newPosition;
 
-        return;
-        // === ИСПРАВЛЕНИЕ: плавный поворот через lookahead-точку ===
+        // === ИСПРАВЛЕНИЕ: плавный поворот через lookahead-точку для splineObject ===
         // Вместо направления к текущей точке — смотрим на СЛЕДУЮЩУЮ
         int nextIndex = (currentWaypointIndex + 1) % waypoints.Count;
-        Node lookaheadWaypoint = waypoints[nextIndex];
-        if (lookaheadWaypoint == null) return;
-
-        vec3 lookaheadPosition = lookaheadWaypoint.WorldPosition;
-        vec3 directionForRotation = lookaheadPosition - currentPosition;
-
-        if (directionForRotation.Length < 0.001f) return;
-
-        vec3 moveDirForRotation = MathLib.Normalize(directionForRotation);
-        // ==========================================================
-
-        //ROTATING
-        // В Unigine "вперёд" = -Z → но у вас уже всё настроено под moveDirection без минуса
-        vec3 desiredForward = moveDirForRotation; // ← БЫЛО: moveDirection, СТАЛО: moveDirForRotation
-        vec3 desiredUp = vec3.UP;
-
-        vec3 right = MathLib.Normalize(MathLib.Cross(desiredUp, desiredForward));
-        if (right.Length < 0.001f)
+        if (nextIndex < waypoints.Count)
         {
-            desiredUp = vec3.RIGHT;
-            right = MathLib.Normalize(MathLib.Cross(desiredUp, desiredForward));
+            Node lookaheadWaypoint = waypoints[nextIndex];
+            if (lookaheadWaypoint != null)
+            {
+                vec3 lookaheadPosition = lookaheadWaypoint.WorldPosition;
+                vec3 directionForRotation = lookaheadPosition - currentPosition;
+
+                if (directionForRotation.Length > 0.001f)
+                {
+                    vec3 moveDirForRotation = MathLib.Normalize(directionForRotation);
+                    
+                    //ROTATING для splineObject
+                    vec3 desiredForward = moveDirForRotation;
+                    vec3 desiredUp = vec3.UP;
+
+                    vec3 right = MathLib.Normalize(MathLib.Cross(desiredUp, desiredForward));
+                    if (right.Length < 0.001f)
+                    {
+                        desiredUp = vec3.RIGHT;
+                        right = MathLib.Normalize(MathLib.Cross(desiredUp, desiredForward));
+                    }
+
+                    vec3 up = MathLib.Normalize(MathLib.Cross(desiredForward, right));
+
+                    // Построение кватерниона из базиса
+                    float trace = right.x + up.y + desiredForward.z;
+                    quat targetRotation;
+
+                    if (trace > 0)
+                    {
+                        float s = 0.5f / MathLib.Sqrt(trace + 1.0f);
+                        targetRotation.w = 0.25f / s;
+                        targetRotation.x = (up.z - desiredForward.y) * s;
+                        targetRotation.y = (desiredForward.x - right.z) * s;
+                        targetRotation.z = (right.y - up.x) * s;
+                    }
+                    else
+                    {
+                        if (right.x > up.y && right.x > desiredForward.z)
+                        {
+                            float s = 2.0f * MathLib.Sqrt(1.0f + right.x - up.y - desiredForward.z);
+                            targetRotation.w = (up.z - desiredForward.y) / s;
+                            targetRotation.x = 0.25f * s;
+                            targetRotation.y = (right.y + up.x) / s;
+                            targetRotation.z = (desiredForward.x + right.z) / s;
+                        }
+                        else if (up.y > desiredForward.z)
+                        {
+                            float s = 2.0f * MathLib.Sqrt(1.0f + up.y - right.x - desiredForward.z);
+                            targetRotation.w = (desiredForward.x - right.z) / s;
+                            targetRotation.x = (right.y + up.x) / s;
+                            targetRotation.y = 0.25f * s;
+                            targetRotation.z = (up.z + desiredForward.y) / s;
+                        }
+                        else
+                        {
+                            float s = 2.0f * MathLib.Sqrt(1.0f + desiredForward.z - right.x - up.y);
+                            targetRotation.w = (right.y - up.x) / s;
+                            targetRotation.x = (desiredForward.x + right.z) / s;
+                            targetRotation.y = (up.z + desiredForward.y) / s;
+                            targetRotation.z = 0.25f * s;
+                        }
+                    }
+
+                    // Компенсация ориентации модели
+                    targetRotation = MathLib.Normalize(targetRotation * new quat(270, 0, 0));
+
+                    // Плавная интерполяция для splineObject
+                    quat newRotation = MathLib.Slerp(splineObject.WorldRotation, targetRotation, rotationSpeed);
+                    splineObject.SetWorldRotation(newRotation);
+                }
+            }
         }
 
-        vec3 up = MathLib.Normalize(MathLib.Cross(desiredForward, right));
-
-        // Построение кватерниона из базиса
-        float trace = right.x + up.y + desiredForward.z;
-        quat targetRotation;
-
-        if (trace > 0)
-        {
-            float s = 0.5f / MathLib.Sqrt(trace + 1.0f);
-            targetRotation.w = 0.25f / s;
-            targetRotation.x = (up.z - desiredForward.y) * s;
-            targetRotation.y = (desiredForward.x - right.z) * s;
-            targetRotation.z = (right.y - up.x) * s;
-        }
-        else
-        {
-            if (right.x > up.y && right.x > desiredForward.z)
-            {
-                float s = 2.0f * MathLib.Sqrt(1.0f + right.x - up.y - desiredForward.z);
-                targetRotation.w = (up.z - desiredForward.y) / s;
-                targetRotation.x = 0.25f * s;
-                targetRotation.y = (right.y + up.x) / s;
-                targetRotation.z = (desiredForward.x + right.z) / s;
-            }
-            else if (up.y > desiredForward.z)
-            {
-                float s = 2.0f * MathLib.Sqrt(1.0f + up.y - right.x - desiredForward.z);
-                targetRotation.w = (desiredForward.x - right.z) / s;
-                targetRotation.x = (right.y + up.x) / s;
-                targetRotation.y = 0.25f * s;
-                targetRotation.z = (up.z + desiredForward.y) / s;
-            }
-            else
-            {
-                float s = 2.0f * MathLib.Sqrt(1.0f + desiredForward.z - right.x - up.y);
-                targetRotation.w = (right.y - up.x) / s;
-                targetRotation.x = (desiredForward.x + right.z) / s;
-                targetRotation.y = (up.z + desiredForward.y) / s;
-                targetRotation.z = 0.25f * s;
-            }
-        }
-
-        // Компенсация ориентации модели (как в SplineMover)
-        targetRotation = MathLib.Normalize(targetRotation * new quat(270, 0, 0));
-
-        // Плавная интерполяция
-        currentRotation = MathLib.Slerp(currentRotation, targetRotation, rotationSpeed);
-
+        // Теперь RotatingNodes просто вращаются с постоянной скоростью (если нужна такая логика)
         if (RotatingNodes != null)
         {
             for (int i = 0; i < RotatingNodes.Count; i++)
@@ -214,16 +218,12 @@ public class WaypointMover : Component
                 if (RotatingNodes[i] != null)
                 {
                     Node child = RotatingNodes[i];
-                    // Сохраняем текущий scale и position — они могут сломаться при SetWorldTransform
-                    vec3 savedScale = child.WorldScale;
-                    vec3 savedPosition = child.WorldPosition;
-
-                    // Устанавливаем целевое мировое вращение
-                    child.SetWorldRotation(currentRotation);
-
-                    // Восстанавливаем scale и position — это предотвращает искажения
+                    // Просто применяем вращение к RotatingNodes без поворота в сторону движения
+                    // Если вы хотите, чтобы они просто вращались, добавьте сюда логику вращения
+                    // Например: child.SetWorldRotation(child.GetWorldRotation() * new quat(rotationSpeed, vec3.UP));
+                    
+                    // Восстанавливаем масштаб, если нужно
                     child.WorldScale = originalScales[i];
-                    child.WorldPosition = savedPosition;
                 }
             }
         }
